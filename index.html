@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RecipeHub | Discover Delicious Recipes</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+   
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fc;
+            color: #1f2937;
+        }
+
+
+        .navbar-custom {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: 800;
+            color: #3f24ee !important;
+        }
+
+        .navbar-brand span {
+            color: #ff6b35;
+        }
+
+        .nav-link {
+            color: #555 !important;
+            font-weight: 500;
+            margin-left: 15px;
+        }
+
+        .nav-link:hover {
+            color: #3f24ee !important;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            margin: 35px auto 55px;
+            max-width: 1250px;
+            min-height: 350px;
+            border-radius: 30px;
+            padding: 65px 70px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(63, 36, 238, 0.95),
+                    rgba(117, 77, 255, 0.88)
+                );
+
+            color: white;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            right: 80px;
+            top: -100px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+            right: -40px;
+            bottom: -100px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #ffd166;
+        }
+
+        .hero p {
+            font-size: 17px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+    
+
+        .search-box {
+            width: 100%;
+            max-width: 620px;
+            height: 60px;
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            padding: 0 8px 0 20px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .search-box i {
+            color: #777;
+            font-size: 20px;
+        }
+
+        .search-box input {
+            flex: 1;
+            height: 100%;
+            border: none;
+            outline: none;
+            padding: 0 15px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .search-btn {
+            border: none;
+            background: #ff6b35;
+            color: white;
+            height: 45px;
+            padding: 0 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #e95522;
+            transform: translateY(-1px);
+        }
+
+    
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .section-title span {
+            color: #3f24ee;
+        }
+
+        .view-all {
+            color: #3f24ee;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .view-all:hover {
+            color: #ff6b35;
+        }
+
+        
+
+        
+    </style>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+
+        <a class="navbar-brand">
+            My<span>Restro</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            
+
+        </div>
+
+    </div>
+</nav>
+
+
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Welcome to
+            <span>MyRestro</span>
+        </h1>
+
+        <p>
+            Discover tasty recipes, explore new flavors,
+            and find your next favorite meal.
+        </p>
+
+        <div class="search-box">
+
+            <i class="bi bi-search"></i>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search for recipes..."
+            >
+
+            <button class="search-btn" >
+                Search
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<div class="container">
+
+    
+
+
+    <div class="row g-4" id="id1">
+
+        
+
+    </div>
+
+</div>
+
+
+
+<script>
+        function fetchData(){
+            fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert')
+            .then(res =>res.json())
+            .then(data => {
+                let arrdata = data.meals
+                let ans = ``
+                for(let i=0;i<arrdata.length;i++){
+                    // ans+=`<img src=${arrdata[i].strMealThumb} width="200px" height="200px">`
+                    ans+=`<div class="col-md-4">
+                        <div class="card">
+                            <img src=${arrdata[i].strMealThumb} class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">${arrdata[i].strMeal}</h5>
+                            </div>
+                            </div>
+                        </div>
+                        `
+                }
+                document.getElementById('id1').innerHTML = ans
+            })
+        }
+        fetchData()
+    </script>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
